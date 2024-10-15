@@ -85,9 +85,10 @@ const login = (req, res) => {
           .status(AUTHENTICATIONERROR)
           .send({ message: "Incorrect email or password" });
       }
+
       return res
         .status(INTERNAL_SERVER_ERROR)
-        .send({ message: "An error has occurred on the server" });
+        .send({ message: "Internal server error" });
     });
 };
 
